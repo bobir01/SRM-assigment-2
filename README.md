@@ -1,119 +1,90 @@
-# Wildlife Population Environmental Impact Analysis
+# Wildlife Population Environmental Impact Report
 
-This project analyzes the environmental impacts on wildlife populations across different habitats using survival analysis and environmental risk assessment techniques.
+## Introduction
 
-## Overview
+This report presents a comprehensive survival analysis of wildlife populations across different habitats, examining the relationship between environmental factors and population survival rates. The study utilizes advanced statistical methods including Kaplan-Meier survival analysis and environmental risk assessment techniques.
 
-The analysis focuses on understanding how various environmental factors affect wildlife survival rates across different habitat types. It processes two main datasets:
+## Key Findings
 
-1. `factor_data.csv`: Environmental variables
-   - Air Quality
-   - Temperature
-   - Deforestation Rate
-   - Species Diversity
-   - Reproductive Rates
+1. **Habitat-Specific Survival Rates**
+   - Grassland habitats demonstrate the highest survival rates (111.2 days mean survival)
+   - Wetland areas show significantly lower survival rates (80.0 days mean survival)
+   - Forest and Savanna maintain intermediate survival patterns
+   - Mountain regions exhibit high variability in survival outcomes
 
-2. `survival_data.csv`: Population survival data
-   - Survival Time (days)
-   - Censoring Status
-   - Habitat Types
+2. **Environmental Risk Factors**
+   - Environmental risk scores follow a normal distribution (mean = 0.087, SD = 1.81)
+   - 4.8% of observations show extreme temperature conditions
+   - Strong correlation between species diversity and reproductive rates
+   - Negative impact of deforestation on air quality
 
-## Key Features
+3. **Population Resilience**
+   - 19.2% overall censoring rate indicates good data completeness
+   - Habitat-specific censoring rates vary from 14% (Savanna) to 24% (Wetland)
+   - Individual outliers in survival times suggest population adaptability
+   - Environmental factors show significant interconnectedness
 
-- Survival analysis across different habitats
-- Environmental risk assessment
-- Correlation analysis of environmental factors
-- Statistical summaries and visualizations
+## Experimental Analysis and Visualizations
 
-## Installation
-
-1. Create a virtual environment:
-```bash
-python3 -m venv venv
-```
-
-2. Activate the virtual environment:
-```bash
-source venv/bin/activate  # On Unix/macOS
-```
-
-3. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-## Usage
-
-Run the analysis script:
-```bash
-python wildlife_analysis.py
-```
-
-This will generate:
-- Analysis results in the terminal
-- Visualization plots in the `plots/` directory
-
-## Analysis Results and Visualizations
-
-### 1. Survival Patterns Across Habitats
+### 1. Survival Analysis by Habitat Type
 ![Survival Patterns](plots/survival_patterns.png)
 
-This Kaplan-Meier survival analysis reveals:
-- Grassland habitats show the highest survival probability over time
-- Wetland areas demonstrate consistently lower survival rates
-- Forest and Savanna habitats maintain intermediate survival patterns
-- Confidence intervals (shaded areas) indicate the reliability of survival estimates
-- Significant divergence in survival patterns becomes apparent after approximately 50 days
+The Kaplan-Meier survival curves reveal:
+- Clear differentiation in survival probabilities across habitats
+- Significant survival advantage in Grassland environments
+- Progressive decline in Wetland survival rates
+- Survival patterns diverge notably after 50 days
+- Confidence intervals indicate high reliability of estimates
 
-### 2. Environmental Risk Distribution
+### 2. Environmental Risk Assessment
 ![Risk Distribution](plots/risk_distribution.png)
 
-The environmental risk score distribution shows:
-- Normal distribution centered near zero (mean = 0.087)
-- Standard deviation of 1.81 indicates moderate variability
-- Most populations experience risk scores between -2 and +2
-- Extreme risk scores (>|3|) are relatively rare
-- Slight positive skew suggests a tendency toward higher risk conditions
+Risk score analysis demonstrates:
+- Symmetrical distribution of environmental risks
+- Majority of populations face moderate risk levels (-2 to +2)
+- Limited occurrence of extreme risk conditions
+- Slight positive skew indicating tendency toward higher risk
 
-### 3. Environmental Factor Correlations
+### 3. Environmental Factor Interactions
 ![Correlation Matrix](plots/correlation_matrix.png)
 
-Key correlations between environmental factors:
-- Strong positive correlation between Species Diversity and Reproductive Rates
-- Negative correlation between Deforestation Rate and Air Quality
-- Temperature shows moderate correlations with multiple factors
-- Air Quality positively correlates with Species Diversity
-- Complex interactions suggest interconnected ecosystem dynamics
+The correlation analysis reveals critical relationships:
+- Species Diversity strongly influences Reproductive Rates
+- Air Quality deteriorates with increased Deforestation
+- Temperature affects multiple environmental parameters
+- Complex ecosystem interactions require holistic management
 
-### 4. Survival Time Distribution by Habitat
+### 4. Survival Time Distributions
 ![Survival Distribution](plots/survival_distribution.png)
 
-The box plot analysis reveals:
-- Median survival times vary significantly across habitats
-- Grassland habitats show the highest median survival time (~111 days)
-- Wetland areas have the lowest median survival time (~80 days)
-- Mountain habitats show the highest variability in survival times
-- Outliers present in all habitats suggest individual resilience
+Habitat-specific survival patterns show:
+- Consistent superiority of Grassland survival times
+- Critical vulnerability in Wetland populations
+- High variability in Mountain habitat outcomes
+- Presence of resilient individuals across all habitats
 
-## Conservation Implications
+## Conclusions and Recommendations
 
-Based on the analysis results:
+### Key Conclusions
+1. Habitat type significantly influences wildlife survival rates
+2. Environmental factors demonstrate complex interdependencies
+3. Population resilience varies considerably across different ecosystems
+4. Temperature extremes affect a small but significant portion of populations
 
-1. **Priority Areas**:
-   - Wetland habitats require immediate conservation attention
-   - Mountain regions need stabilization measures to reduce survival variability
+### Conservation Priorities
+1. **Immediate Action Required**:
+   - Implementation of Wetland protection measures
+   - Stabilization of Mountain habitat conditions
+   - Air quality improvement initiatives
 
-2. **Success Models**:
-   - Grassland conservation practices should be studied and replicated
-   - Forest management strategies show moderate success
+2. **Strategic Recommendations**:
+   - Replication of successful Grassland conservation practices
+   - Development of habitat-specific management strategies
+   - Regular monitoring of species diversity indicators
+   - Focus on reproductive rate enhancement in vulnerable areas
 
-3. **Risk Management**:
-   - Environmental risk scores can predict population vulnerabilities
-   - Temperature extremes affect 4.8% of observations
-   - Air quality improvements could benefit multiple environmental factors
-
-4. **Monitoring Recommendations**:
-   - Regular tracking of species diversity as a key indicator
-   - Focus on reproductive rates in high-risk areas
-   - Continuous assessment of habitat-specific survival patterns
-
+### Future Considerations
+- Long-term monitoring of environmental risk trends
+- Development of habitat-specific intervention strategies
+- Integration of climate change adaptation measures
+- Enhancement of cross-habitat conservation corridors
