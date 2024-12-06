@@ -117,17 +117,3 @@ Based on the analysis results:
    - Focus on reproductive rates in high-risk areas
    - Continuous assessment of habitat-specific survival patterns
 
-## Dependencies
-
-- pandas>=1.5.0
-- matplotlib>=3.5.0
-- seaborn>=0.12.0
-- lifelines>=0.27.0
-
-## Contributing
-
-Feel free to submit issues and enhancement requests!
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
